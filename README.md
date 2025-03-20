@@ -34,3 +34,27 @@ docker push votre_nom_utilisateur/basic-python-server:v1.0
 ```bash
 docker run -p 8000:8000 votre_nom_utilisateur/basic-python-server:v1.0
 ```
+
+## 🚀 🚀 Automatisation du Push de l’Image vers DockerHub avec GitHub Actions
+
+### 1📌 Prérequis
+#### ✅ Un compte GitHub
+#### ✅ Un compte DockerHub
+#### ✅ Un dépôt GitHub contenant votre projet
+#### ✅ Créer deux secrets dans GitHub :
+
+#### DOCKER_USERNAME (votre nom d’utilisateur DockerHub)
+#### DOCKER_PASSWORD (votre mot de passe ou token d’accès DockerHub recommandé)
+
+### 1️⃣ Créer le fichier GitHub Actions
+#### 📁 .github/workflows/docker-publish.yml
+### 2️⃣ Configurer GitHub Secrets
+#### Ajoutez les secrets :
+#### DOCKER_USERNAME → Votre nom d’utilisateur DockerHub
+#### DOCKER_PASSWORD → Votre mot de passe ou Token DockerHub
+
+### 3️⃣ Tester l’Automatisation
+#### ✅ Faites un commit et un push sur la branche main
+#### ✅ Sur GitHub → Actions, vérifiez que le workflow s’exécute correctement.
+#### ✅ Sur DockerHub, votre image devrait être mise à jour sous v1.0 et latest.
+
